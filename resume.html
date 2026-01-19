@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume | Utku Dağlı</title>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    ::selection {
+      background: #000;
+      color: #fff;
+    }
+
+    body {
+      min-height: 100vh;
+      background-color: #fff;
+      color: #1a1a1a;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .link {
+      color: #666;
+      text-decoration: none;
+      transition: color 0.2s;
+      cursor: pointer;
+    }
+
+    .link:hover {
+      color: #000;
+    }
+
+    .link.active {
+      color: #000;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      padding: 24px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 1px solid #eee;
+      background: #fff;
+      z-index: 100;
+    }
+
+    header h1 {
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    header p {
+      font-size: 14px;
+      color: #888;
+      margin-top: 2px;
+    }
+
+    nav {
+      display: flex;
+      gap: 32px;
+    }
+
+    /* Resume Section */
+    .resume-section {
+      padding: 48px;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 32px;
+    }
+
+    .section-title {
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #888;
+    }
+
+    .action-buttons {
+      display: flex;
+      gap: 12px;
+    }
+
+    .open-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: #fff;
+      color: #1a1a1a;
+      border: 1px solid #ddd;
+      font-size: 14px;
+      font-family: inherit;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .open-btn:hover {
+      border-color: #000;
+      background: #000;
+      color: #fff;
+    }
+
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: #1a1a1a;
+      color: #fff;
+      border: 1px solid #1a1a1a;
+      font-size: 14px;
+      font-family: inherit;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-decoration: none;
+    }
+
+    .download-btn:hover {
+      background: #333;
+      border-color: #333;
+    }
+
+    /* PDF Viewer */
+    .pdf-viewer {
+      border: 1px solid #eee;
+      background: #f9f9f9;
+      min-height: calc(100vh - 250px);
+    }
+
+    .pdf-viewer object,
+    .pdf-viewer iframe {
+      width: 100%;
+      height: calc(100vh - 250px);
+      min-height: 600px;
+      display: block;
+      border: none;
+    }
+
+    .pdf-fallback {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: calc(100vh - 250px);
+      min-height: 400px;
+      gap: 24px;
+      color: #666;
+    }
+
+    .pdf-fallback p {
+      font-size: 15px;
+    }
+
+    .helper-text {
+      margin-top: 16px;
+      font-size: 13px;
+      color: #999;
+      text-align: center;
+    }
+
+    /* Footer */
+    footer {
+      padding: 24px 48px;
+      border-top: 1px solid #eee;
+      font-size: 13px;
+      color: #aaa;
+    }
+
+    /* Scroll to Top Button */
+    .scroll-top-btn {
+      position: fixed;
+      bottom: 32px;
+      left: 32px;
+      width: 40px;
+      height: 40px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+      z-index: 100;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .scroll-top-btn.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .scroll-top-btn:hover {
+      border-color: #000;
+      background: #000;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div>
+      <h1><a href="index.html">Utku Dağlı</a></h1>
+      <p>Game Designer & Developer</p>
+    </div>
+    <nav>
+      <a href="resume.html" class="link active">Resume</a>
+      <a href="certificates.html" class="link">Certificates</a>
+      <a href="blog.html" class="link">Blog</a>
+      <a href="contact.html" class="link">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Resume Section -->
+  <section class="resume-section">
+    <div class="section-header">
+      <h2 class="section-title">Resume</h2>
+      <div class="action-buttons">
+        <button class="open-btn" onclick="openInNewTab()">
+          Open in New Tab
+          <span>↗</span>
+        </button>
+        <a href="resume/Utku_Dagli_CV.pdf" download="Utku_Dagli_CV.pdf" class="download-btn">
+          Download PDF
+          <span>↓</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- PDF Viewer -->
+    <div class="pdf-viewer" id="pdfViewer">
+      <object data="resume/Utku_Dagli_CV.pdf" type="application/pdf">
+        <iframe src="resume/Utku_Dagli_CV.pdf" title="Resume PDF">
+          <!-- Fallback content -->
+        </iframe>
+      </object>
+    </div>
+
+    <p class="helper-text">
+      Having trouble viewing? Use the buttons above to open or download the PDF.
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Utku Dağlı
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top-btn" id="scrollTopBtn" onclick="scrollToTop()">↑</button>
+
+  <script>
+    // PDF URL - change this to your actual PDF path
+    const pdfUrl = 'resume/Utku_Dagli_CV.pdf';
+
+    function openInNewTab() {
+      window.open(pdfUrl, '_blank');
+    }
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    window.addEventListener('scroll', () => {
+      const btn = document.getElementById('scrollTopBtn');
+      if (window.scrollY > 400) {
+        btn.classList.add('visible');
+      } else {
+        btn.classList.remove('visible');
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Utku Dağlı</title>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    ::selection {
+      background: #000;
+      color: #fff;
+    }
+
+    body {
+      min-height: 100vh;
+      background-color: #fff;
+      color: #1a1a1a;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .link {
+      color: #666;
+      text-decoration: none;
+      transition: color 0.2s;
+      cursor: pointer;
+    }
+
+    .link:hover {
+      color: #000;
+    }
+
+    .link.active {
+      color: #000;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      padding: 24px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 1px solid #eee;
+      background: #fff;
+      z-index: 100;
+    }
+
+    header h1 {
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    header p {
+      font-size: 14px;
+      color: #888;
+      margin-top: 2px;
+    }
+
+    nav {
+      display: flex;
+      gap: 32px;
+    }
+
+    /* Blog Section */
+    .blog-section {
+      padding: 48px;
+      max-width: 900px;
+    }
+
+    .section-title {
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #888;
+      margin-bottom: 16px;
+    }
+
+    .blog-intro {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 24px;
+      line-height: 1.5;
+      color: #333;
+      margin-bottom: 48px;
+      max-width: 600px;
+    }
+
+    /* Posts List */
+    .post-item {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 48px;
+      padding: 48px 0;
+      border-bottom: 1px solid #eee;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .post-item:hover {
+      background: #fafafa;
+      margin: 0 -48px;
+      padding: 48px;
+    }
+
+    .post-date {
+      font-size: 13px;
+      color: #888;
+      line-height: 1.6;
+    }
+
+    .post-read-time {
+      font-size: 12px;
+      color: #aaa;
+      margin-top: 4px;
+    }
+
+    .post-title {
+      font-family: 'Newsreader', Georgia, serif;
+      font-size: 22px;
+      font-weight: 500;
+      margin-bottom: 12px;
+      line-height: 1.3;
+      color: #333;
+      transition: color 0.2s;
+    }
+
+    .post-item:hover .post-title {
+      color: #000;
+    }
+
+    .post-excerpt {
+      font-size: 15px;
+      color: #666;
+      line-height: 1.7;
+      margin-bottom: 16px;
+      max-width: 540px;
+    }
+
+    .read-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #888;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+
+    .post-item:hover .read-link {
+      color: #000;
+    }
+
+    /* Footer */
+    footer {
+      padding: 24px 48px;
+      border-top: 1px solid #eee;
+      font-size: 13px;
+      color: #aaa;
+    }
+
+    /* Scroll to Top Button */
+    .scroll-top-btn {
+      position: fixed;
+      bottom: 32px;
+      left: 32px;
+      width: 40px;
+      height: 40px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+      z-index: 100;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .scroll-top-btn.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .scroll-top-btn:hover {
+      border-color: #000;
+      background: #000;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div>
+      <h1><a href="index.html">Utku Dağlı</a></h1>
+      <p>Game Designer & Developer</p>
+    </div>
+    <nav>
+      <a href="resume.html" class="link">Resume</a>
+      <a href="certificates.html" class="link">Certificates</a>
+      <a href="blog.html" class="link active">Blog</a>
+      <a href="contact.html" class="link">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Blog Section -->
+  <section class="blog-section">
+    <h2 class="section-title">Blog</h2>
+    <p class="blog-intro">Thoughts on game design, development, and interactive experiences.</p>
+
+    <!-- Posts List -->
+    <div class="posts-list">
+      <article class="post-item" onclick="location.href='blog-post.html?slug=punishment-mechanics-player-motivation'">
+        <div class="post-meta">
+          <p class="post-date">December 15, 2024</p>
+          <p class="post-read-time">8 min read</p>
+        </div>
+        <div class="post-content">
+          <h3 class="post-title">Punishment Mechanics and Player Motivation</h3>
+          <p class="post-excerpt">Exploring how punishment mechanics in video games affect player experience and what motivates players to continue despite challenges. Insights from my master's thesis research.</p>
+          <span class="read-link">Read more <span>→</span></span>
+        </div>
+      </article>
+
+      <article class="post-item" onclick="location.href='blog-post.html?slug=designing-roguelike-systems'">
+        <div class="post-meta">
+          <p class="post-date">November 28, 2024</p>
+          <p class="post-read-time">12 min read</p>
+        </div>
+        <div class="post-content">
+          <h3 class="post-title">Designing Roguelike Systems: Lessons from Heretic</h3>
+          <p class="post-excerpt">A deep dive into the game design decisions behind Heretic, from AI behavior patterns to balancing permadeath mechanics.</p>
+          <span class="read-link">Read more <span>→</span></span>
+        </div>
+      </article>
+
+      <article class="post-item" onclick="location.href='blog-post.html?slug=vr-interaction-design-principles'">
+        <div class="post-meta">
+          <p class="post-date">October 10, 2024</p>
+          <p class="post-read-time">6 min read</p>
+        </div>
+        <div class="post-content">
+          <h3 class="post-title">VR Interaction Design Principles</h3>
+          <p class="post-excerpt">What I learned about designing intuitive VR interactions while working on Atlas Space and other VR projects.</p>
+          <span class="read-link">Read more <span>→</span></span>
+        </div>
+      </article>
+
+      <article class="post-item" onclick="location.href='blog-post.html?slug=game-jam-lessons'">
+        <div class="post-meta">
+          <p class="post-date">September 5, 2024</p>
+          <p class="post-read-time">5 min read</p>
+        </div>
+        <div class="post-content">
+          <h3 class="post-title">What 5 Game Jams Taught Me About Rapid Prototyping</h3>
+          <p class="post-excerpt">Reflections on organizing and participating in game jams at Klagenfurt, and how constraints breed creativity.</p>
+          <span class="read-link">Read more <span>→</span></span>
+        </div>
+      </article>
+
+      <article class="post-item" onclick="location.href='blog-post.html?slug=ai-difficulty-in-games'">
+        <div class="post-meta">
+          <p class="post-date">August 12, 2024</p>
+          <p class="post-read-time">7 min read</p>
+        </div>
+        <div class="post-content">
+          <h3 class="post-title">The Difficulty of Videogames and Intelligence of AI</h3>
+          <p class="post-excerpt">A summary of my published article exploring the relationship between game difficulty and AI behavior.</p>
+          <span class="read-link">Read more <span>→</span></span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Utku Dağlı
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top-btn" id="scrollTopBtn" onclick="scrollToTop()">↑</button>
+
+  <script>
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    window.addEventListener('scroll', () => {
+      const btn = document.getElementById('scrollTopBtn');
+      if (window.scrollY > 400) {
+        btn.classList.add('visible');
+      } else {
+        btn.classList.remove('visible');
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificates | Utku Dağlı</title>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    ::selection {
+      background: #000;
+      color: #fff;
+    }
+
+    body {
+      min-height: 100vh;
+      background-color: #fff;
+      color: #1a1a1a;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .link {
+      color: #666;
+      text-decoration: none;
+      transition: color 0.2s;
+      cursor: pointer;
+    }
+
+    .link:hover {
+      color: #000;
+    }
+
+    .link.active {
+      color: #000;
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      padding: 24px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 1px solid #eee;
+      background: #fff;
+      z-index: 100;
+    }
+
+    header h1 {
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    header p {
+      font-size: 14px;
+      color: #888;
+      margin-top: 2px;
+    }
+
+    nav {
+      display: flex;
+      gap: 32px;
+    }
+
+    /* Certificates Section */
+    .certificates-section {
+      padding: 48px;
+    }
+
+    .section-title {
+      font-size: 12px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #888;
+      margin-bottom: 32px;
+    }
+
+    .certificates-layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 0;
+    }
+
+    /* Certificate List */
+    .certificate-list {
+      border-right: 1px solid #eee;
+    }
+
+    .cert-tab {
+      display: block;
+      width: 100%;
+      padding: 16px 24px;
+      background: #fff;
+      border: 1px solid #eee;
+      border-bottom: none;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-align: left;
+      font-family: inherit;
+    }
+
+    .cert-tab:last-child {
+      border-bottom: 1px solid #eee;
+    }
+
+    .cert-tab:hover {
+      background: #fafafa;
+    }
+
+    .cert-tab.active {
+      background: #f9f9f9;
+      border-color: #ddd;
+      position: relative;
+    }
+
+    .cert-tab.active::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: #f9f9f9;
+    }
+
+    .cert-tab-title {
+      font-size: 15px;
+      font-weight: 500;
+      margin-bottom: 4px;
+      color: #444;
+    }
+
+    .cert-tab.active .cert-tab-title {
+      color: #000;
+    }
+
+    .cert-tab-meta {
+      font-size: 13px;
+      color: #888;
+    }
+
+    /* PDF Viewer Area */
+    .pdf-area {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .action-bar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 16px 24px;
+      border-bottom: 1px solid #eee;
+      background: #f9f9f9;
+      gap: 12px;
+    }
+
+    .open-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: #fff;
+      color: #1a1a1a;
+      border: 1px solid #ddd;
+      font-size: 14px;
+      font-family: inherit;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .open-btn:hover {
+      border-color: #000;
+      background: #000;
+      color: #fff;
+    }
+
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      background: #1a1a1a;
+      color: #fff;
+      border: 1px solid #1a1a1a;
+      font-size: 14px;
+      font-family: inherit;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-decoration: none;
+    }
+
+    .download-btn:hover {
+      background: #333;
+      border-color: #333;
+    }
+
+    /* PDF Viewer */
+    .pdf-viewer {
+      background: #f9f9f9;
+      min-height: calc(100vh - 320px);
+    }
+
+    .pdf-viewer object,
+    .pdf-viewer iframe {
+      width: 100%;
+      height: calc(100vh - 320px);
+      min-height: 500px;
+      display: block;
+      border: none;
+    }
+
+    .helper-text {
+      margin-top: 16px;
+      font-size: 13px;
+      color: #999;
+      text-align: center;
+    }
+
+    /* Footer */
+    footer {
+      padding: 24px 48px;
+      border-top: 1px solid #eee;
+      font-size: 13px;
+      color: #aaa;
+    }
+
+    /* Scroll to Top Button */
+    .scroll-top-btn {
+      position: fixed;
+      bottom: 32px;
+      left: 32px;
+      width: 40px;
+      height: 40px;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+      z-index: 100;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .scroll-top-btn.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .scroll-top-btn:hover {
+      border-color: #000;
+      background: #000;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div>
+      <h1><a href="index.html">Utku Dağlı</a></h1>
+      <p>Game Designer & Developer</p>
+    </div>
+    <nav>
+      <a href="resume.html" class="link">Resume</a>
+      <a href="certificates.html" class="link active">Certificates</a>
+      <a href="blog.html" class="link">Blog</a>
+      <a href="contact.html" class="link">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Certificates Section -->
+  <section class="certificates-section">
+    <h2 class="section-title">Certificates</h2>
+
+    <div class="certificates-layout">
+      <!-- Certificate List -->
+      <div class="certificate-list">
+        <button class="cert-tab active" data-cert="0" onclick="selectCertificate(0)">
+          <p class="cert-tab-title">User Experience Design</p>
+          <p class="cert-tab-meta">Ludens · 2023</p>
+        </button>
+        <button class="cert-tab" data-cert="1" onclick="selectCertificate(1)">
+          <p class="cert-tab-title">Game Design Fundamentals</p>
+          <p class="cert-tab-meta">Ludens · 2022</p>
+        </button>
+        <button class="cert-tab" data-cert="2" onclick="selectCertificate(2)">
+          <p class="cert-tab-title">Level Design</p>
+          <p class="cert-tab-meta">Ludens · 2022</p>
+        </button>
+      </div>
+
+      <!-- PDF Viewer Area -->
+      <div class="pdf-area">
+        <div class="action-bar">
+          <button class="open-btn" onclick="openInNewTab()">
+            Open in New Tab
+            <span>↗</span>
+          </button>
+          <a href="#" id="downloadLink" class="download-btn" download>
+            Download PDF
+            <span>↓</span>
+          </a>
+        </div>
+
+        <div class="pdf-viewer" id="pdfViewer">
+          <object id="pdfObject" data="certificates/ux-design-certificate.pdf" type="application/pdf">
+            <iframe id="pdfIframe" src="certificates/ux-design-certificate.pdf" title="Certificate PDF"></iframe>
+          </object>
+        </div>
+      </div>
+    </div>
+
+    <p class="helper-text">
+      Having trouble viewing? Use the buttons above to open or download the PDF.
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Utku Dağlı
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top-btn" id="scrollTopBtn" onclick="scrollToTop()">↑</button>
+
+  <script>
+    // Certificate data - update with your actual certificate paths
+    const certificates = [
+      {
+        title: 'User Experience Design',
+        issuer: 'Ludens',
+        year: '2023',
+        pdfUrl: 'certificates/ux-design-certificate.pdf'
+      },
+      {
+        title: 'Game Design Fundamentals',
+        issuer: 'Ludens',
+        year: '2022',
+        pdfUrl: 'certificates/game-design-certificate.pdf'
+      },
+      {
+        title: 'Level Design',
+        issuer: 'Ludens',
+        year: '2022',
+        pdfUrl: 'certificates/level-design-certificate.pdf'
+      }
+    ];
+
+    let currentCertificate = 0;
+
+    function selectCertificate(index) {
+      currentCertificate = index;
+      const cert = certificates[index];
+      
+      // Update active tab
+      document.querySelectorAll('.cert-tab').forEach((tab, i) => {
+        tab.classList.toggle('active', i === index);
+      });
+      
+      // Update PDF viewer
+      const pdfObject = document.getElementById('pdfObject');
+      const pdfIframe = document.getElementById('pdfIframe');
+      const downloadLink = document.getElementById('downloadLink');
+      
+      pdfObject.data = cert.pdfUrl;
+      pdfIframe.src = cert.pdfUrl;
+      downloadLink.href = cert.pdfUrl;
+      downloadLink.download = cert.title.replace(/\s+/g, '_') + '_Certificate.pdf';
+    }
+
+    function openInNewTab() {
+      window.open(certificates[currentCertificate].pdfUrl, '_blank');
+    }
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    window.addEventListener('scroll', () => {
+      const btn = document.getElementById('scrollTopBtn');
+      if (window.scrollY > 400) {
+        btn.classList.add('visible');
+      } else {
+        btn.classList.remove('visible');
+      }
+    });
+
+    // Initialize download link
+    document.addEventListener('DOMContentLoaded', () => {
+      selectCertificate(0);
+    });
+  </script>
+</body>
+</html>
