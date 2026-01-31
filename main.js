@@ -126,7 +126,7 @@ const projects = [
       { type: "website", url: "h-P568tjTuw" },
     ],
     gallery: [
-      { type: "youtube", videoId: "ndArnK68q9Q" },
+      { type: "youtube", videoId: "h-P568tjTuw" },
     ]
   },
   {
