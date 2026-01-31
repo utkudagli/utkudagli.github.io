@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Certificates</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header" id="header"></header>
+  
+  <main class="main">
+    <section class="section container">
+      <p class="section-label">Certificates</p>
+      <div class="certificates-grid">
+        <div class="certificate-list" id="certificate-list"></div>
+        <div class="certificate-viewer" id="certificate-viewer"></div>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="footer" id="footer"></footer>
+  
+  <script src="main.js"></script>
+  <script>
+    initPage('certificates');
+    renderCertificates();
+  </script>
+</body>
+</html>

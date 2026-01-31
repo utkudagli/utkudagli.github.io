@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header" id="header"></header>
+  
+  <main class="main">
+    <!-- Hero -->
+    <section class="section hero container" id="hero"></section>
+    
+    <!-- Projects -->
+    <section class="section container">
+      <p class="section-label">Projects</p>
+      <div class="projects" id="projects"></div>
+    </section>
+    
+    <!-- Background -->
+    <section class="section container">
+      <div class="background-wrapper" id="background"></div>
+    </section>
+  </main>
+  
+  <footer class="footer" id="footer"></footer>
+  
+  <script src="main.js"></script>
+  <script>
+    initPage('home');
+    renderHero();
+    renderProjects();
+    renderBackground();
+  </script>
+</body>
+</html>
