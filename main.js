@@ -40,8 +40,8 @@ const projects = [
       { type: "website", url: "https://mawforged.com/" }
     ],
     gallery: [
-      { type: "image", url: "Projects/Mawforged/ss_92d93e83d195df786a3256aab4a0e940604c0216.1920x1080.jpg" },
       { type: "youtube", videoId: "08VWrf6QJd4" },
+      { type: "image", url: "Projects/Mawforged/ss_92d93e83d195df786a3256aab4a0e940604c0216.1920x1080.jpg" },
     ]
   },
   {
@@ -123,7 +123,7 @@ const projects = [
       "Developed the multiplayer infrastructure.",
     ],
     links: [
-      { type: "website", url: "h-P568tjTuw" },
+      { type: "website", url: "http://atlas.space/" },
     ],
     gallery: [
       { type: "youtube", videoId: "h-P568tjTuw" },
@@ -146,7 +146,7 @@ const projects = [
       "Worked to port this project to standalone headsets",
     ],
     links: [
-      { type: "website", url: "https://www.garageatlas.com/products-atlashome" },
+      { type: "website", url: "ayiL9AgDLqY" },
     ],
     gallery: [
       { type: "youtube", videoId: "RvG5tNKRBns" },
