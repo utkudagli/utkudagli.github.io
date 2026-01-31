@@ -1,6 +1,6 @@
 // Portfolio Data - Replace with your actual data
 const portfolioData = {
-  name: "Your Name",
+  name: "Utku Dagli",
   title: "Game Developer & Web Designer",
   description: [
     "Welcome, weary traveller, to my portfolio. My name is Utku! I am a multidisciplinary individual with a core focus on game design, an interest in user experience, and experience as a designer and developer. Currently working at Axiosys on Mawforged.<br><br> Below, you'll find more information about my portfolio, skills and myself.",
@@ -146,10 +146,10 @@ const projects = [
       "Worked to port this project to standalone headsets",
     ],
     links: [
-      { type: "website", url: "ayiL9AgDLqY" },
+      { type: "website", url: "https://www.garageatlas.com/products-atlashome" },
     ],
     gallery: [
-      { type: "youtube", videoId: "RvG5tNKRBns" },
+      { type: "youtube", videoId: "ayiL9AgDLqY" },
     ]
   },
 ];
