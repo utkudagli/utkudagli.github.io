@@ -140,7 +140,7 @@ const projects = [
       "",
       "Developed using Unreal Engine 4.",
       "",
-      "Virtual Training simulations provide a formal educational tool for people who need to train for operating large scale industrial machines and gaining qualifications."
+      "AtlasHome is a custom Virtual Reality simulation created for editing, displaying, promoting and marketing a property yet to be built."
     ],
     responsibilities: [
       "Worked to port this project to standalone headsets",
