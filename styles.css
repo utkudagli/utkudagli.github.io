@@ -266,7 +266,7 @@ img {
 
 .project {
   padding: 48px 0;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1px solid darkslategrey;
 }
 
 .project:last-child {
@@ -639,12 +639,11 @@ img {
   background: #fafafa;
   border: 1px solid #f0f0f0;
   border-radius: 8px;
-  aspect-ratio: 8.5 / 11;
+  aspect-ratio: 11 / 11;
   display: flex;
   align-items: center;
   justify-content: center;
   max-height: 80vh;
-  max-width: 700px;
   margin: 0 auto;
 }
 
