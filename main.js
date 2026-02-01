@@ -1,7 +1,8 @@
 // Portfolio Data - Replace with your actual data
 const portfolioData = {
   name: "Utku Dagli",
-  title: "Game Developer & Web Designer",
+  title: "Game Designer",
+  logo: "logo.png", 
   description: [
     "Welcome, weary traveller, to my portfolio. My name is Utku! I am a multidisciplinary individual with a core focus on game design, an interest in user experience, and experience as a designer and developer. Currently working at Axiosys on Mawforged.<br><br> Below, you'll find more information about my portfolio, skills and myself.",
   ],
