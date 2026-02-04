@@ -6,9 +6,8 @@ const portfolioData = {
   description: [
     "Welcome, weary traveller, to my portfolio. My name is Utku! I am a multidisciplinary individual with a core focus on game design, an interest in user experience, and experience as a designer and developer. Currently working at Axiosys on Mawforged.<br><br> Below, you'll find more information about my portfolio, skills and myself.",
   ],
-  email: "utkudagli@gmail.com",
+  email: "utku@utkudagli.com",
   social: {
-    github: "https://www.github.com/utkudagli",
     linkedin: "https://www.linkedin.com/in/utkudagli",
     youtube: "https://www.youtube.com/@UtkuLudens"
   },
@@ -312,7 +311,6 @@ function renderFooter() {
         ${portfolioData.email}
       </a>
       <div class="footer-social">
-        <a href="${portfolioData.social.github}" aria-label="GitHub">${icons.github}</a>
         <a href="${portfolioData.social.linkedin}" aria-label="LinkedIn">${icons.linkedin}</a>
         <a href="${portfolioData.social.youtube}" aria-label="Youtube">${icons.youtube}</a>
       </div>
