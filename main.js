@@ -47,7 +47,7 @@ const projects = [
   {
     id: 2,
     title: "Heretic",
-    company: "Personal Project",
+    company: "Thesis Project",
     banner: "Projects/Heretic/Screenshot 2022-11-15 131111.png",
     role: "Game Designer & Developer",
     description: [
