@@ -31,7 +31,7 @@ const projects = [
     ],
     responsibilities: [
       "Using Unreal Engine 5 to design and prototype the mechanics.",
-      "Taking charge of design of AI, in game progression, exploration and traversal mechanics.",
+      "Taking charge of design of NPCs and their AIs, in game progression, gameplay mechanics, system designs and more.",
       "Colaborated closely with other disciplines to design, and mantain sustainable, scalable gameplay systems, and workflows that align with team's standards.",
       "Creating documentation for mechanics that I am responsible for.", 
     ],
