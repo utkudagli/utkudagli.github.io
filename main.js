@@ -26,7 +26,7 @@ const projects = [
       "",
       "Developed using Unreal Engine 5",
       "",
-      "First-Person survival RPG set in a Dark-Fantasy setting. While exploring this dark and layered world, you also need to survive in this harsh world.",
+      "First-Person Dark-Fantasy Survival game. While exploring this dark and layered world, you also need to survive in this harsh world.",
       "",
     ],
     responsibilities: [
