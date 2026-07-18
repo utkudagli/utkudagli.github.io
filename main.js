@@ -1,7 +1,7 @@
 // Portfolio Data - Replace with your actual data
 const portfolioData = {
   name: "Utku Dagli",
-  title: "Game Designer",
+  title: "Game & Technical Designer",
   logo: "logo.png", 
   description: [
     "Welcome, weary traveller, to my portfolio. My name is Utku! I am a multidisciplinary individual with a core focus on game design, an interest in user experience, and experience as a designer and developer. Currently working at Axiosys on Mawforged.<br><br> Below, you'll find more information about my portfolio, skills and myself.",
@@ -26,14 +26,14 @@ const projects = [
       "",
       "Developed using Unreal Engine 5",
       "",
-      "First-Person Dark-Fantasy Survival game. While exploring this dark and layered world, you also need to survive in this harsh world.",
+      "First-Person Dark-Fantasy Survival game. While exploring this dark and layered world, you must also fight to survive it.",
       "",
     ],
     responsibilities: [
-      "Using Unreal Engine 5 to design and prototype the mechanics.",
-      "Taking charge of design of NPCs and their AIs, in game progression, gameplay mechanics, system designs and more.",
-      "Colaborated closely with other disciplines to design, and mantain sustainable, scalable gameplay systems, and workflows that align with team's standards.",
-      "Creating documentation for mechanics that I am responsible for.", 
+      "Designing and prototyping mechanics in Unreal Engine 5.",
+      "Taking charge of NPC and AI design, in-game progression, gameplay mechanics, and systems design.",
+      "Collaborating closely with other disciplines to design and maintain sustainable, scalable gameplay systems and workflows that align with the team's standards.",
+      "Writing design documentation for the mechanics I own.", 
     ],
     links: [
       { type: "steam", url: "https://store.steampowered.com/app/3373310/Mawforged/" },
@@ -55,17 +55,17 @@ const projects = [
       "",
       "Developed using Unreal Engine 5",
       "",
-      "Rogue-like fantasy game set in fantasy world.",
+      "Roguelike set in a dark medieval fantasy world.",
       "",
-      "This game has been designed and developed for the master's thesis, 'Punishment Mechanics in Video Games: Effects on Player Experience and Flow', to explore how players react to punishment mechanics and what motivates them to continue playing despite challenges. Published as a prototype.",
+      "This game has been designed and developed for the master's thesis, 'Punishment Mechanics in Video Games: Effects on Player Experience and Flow', to explore how players react to punishment mechanics and what motivates them to continue playing despite challenges. Shared on itch.io as a prototype.",
       "",  
       "To read the master's thesis paper: <a href=https://resolver.obvsg.at/urn:nbn:at:at-ubk:1-54367>https://resolver.obvsg.at/urn:nbn:at:at-ubk:1-54367</a>"
     ],
     responsibilities: [
-      "Worked on design and development",
-      "Balancing the mechanics and stats of the game.",
-      "Designed the game, level, AI behaviours and attack patterns.",
-      "Implemented the game mechanics into the game. ",
+      "Designed and implemented the gameplay systems.",
+      "Designed AI behaviours and attack patterns.",
+      "Balanced mechanics and stats across the game.",
+      "Applied master's-thesis research on punishment mechanics.",
     ],
     links: [
       { type: "itchio", url: "https://utkudagli.itch.io/heretic" },
@@ -86,12 +86,12 @@ const projects = [
       "",
       "Developed using Unreal Engine 4.",
       "",
-      "Sabotaj is a Competitive FPS game. Two teams are fighting with each other to eliminate each other."
+      "Sabotaj is a competitive FPS. Two teams fight to eliminate each other."
     ],
     responsibilities: [
-      "Worked on designing and developing additional game modes.",
-      "Designed and implemented gameplay and UI elements.",
-      "Worked on development, UI/UX and gameplay design.",
+      "Designed and developed additional game modes.",
+      "Designed and implemented gameplay and UI/UX elements.",
+      "Contributed to gameplay design across iterative testing and design reviews.",
     ],
     links: [
       { type: "steam", url: "https://store.steampowered.com/app/1436900/Sabotaj/" },
@@ -115,7 +115,7 @@ const projects = [
       "",
       "Developed using Unreal Engine 4.",
       "",
-      "AtlasSpace is the foundation for the future of Metaverse infrastructure-as-a-service, providing a platform where diverse individuals, communities and brands can connect and create value. We are dedicated to crafting shared experiences for a true decentralized lifestyle."
+      "Atlas Space is a social VR platform where people meet, interact and share experiences in virtual spaces. I joined during the early prototype phase."
     ],
     responsibilities: [
       "Worked on the early prototype phase.",
@@ -143,7 +143,7 @@ const projects = [
       "AtlasHome is a custom Virtual Reality simulation created for editing, displaying, promoting and marketing a property yet to be built."
     ],
     responsibilities: [
-      "Worked to port this project to standalone headsets",
+      "Ported the project to standalone (Oculus Quest) headsets."
     ],
     links: [
       { type: "website", url: "https://www.garageatlas.com/products-atlashome" },
@@ -184,28 +184,35 @@ const backgroundData = {
   playerCharacter: {
     title: "Player Character",
     paragraphs: [
-      "Utku Dagli is a <strong>Designer</strong> specialised in <strong>Game, Technical and UI/UX Design</strong>. He has been <strong>designing games</strong> for the last fours years and has <strong>developed games</strong> for over seven years. He has worked on several projects, from <strong>computer games to VR/AR</strong>. He worked on one <strong>published game</strong> and <strong>several VR/AR projects</strong>. He has experience with <strong>Unreal Engine 4 and 5</strong> for over seven years and has experience with <strong>Unity</strong> for over four years.",
-      "He is experienced with <strong>C#, C++ and Blueprint of Unreal Engine</strong> and has worked as a game developer for over one year in companies and currently working as a game designer more than 6 months working with various platforms. His degree in engineering improved his skills in <strong>analysing and problem-solving</strong>. His degree in the master program improved his perspectives on games and inspired him to work and study <strong>user experience</strong>. His interest in <strong>user experience prompted him to take</strong> a certificate program in User Experience. He worked as a <strong>Tutor</strong> at the university. He found a chance to work with colleagues and professors from different backgrounds and disciplines. While a tutor, he <strong>helped, guided,</strong> and had sessions with fellow students to discuss and analyse games under the Klagenfurt Game Lab. Also, he has been a <strong>member</strong> of the Klagenfurt Game Jam Organisation Team for the last five game jams."
+      "Utku Dagli is a <strong>Game & Technical Designer</strong>. He has been building games since <strong>2019</strong>, starting with <strong>VR/AR projects</strong> at GarageAtlas and later working on <strong>Sabotaj</strong>, a competitive FPS that <strong>shipped on Steam</strong>. For his master's thesis he designed and built <strong>Heretic</strong>, a solo <strong>Unreal Engine 5 prototype</strong> about punishment mechanics, released on <strong>itch.io</strong>. Since late 2025 he has been working as a <strong>Game Designer at Axiosys</strong> on <strong>Mawforged</strong>, a dark-fantasy survival game.",
+
+      "He studied <strong>Computer Engineering</strong> before moving into games, so he is comfortable on the technical side of development, working in <strong>C++, C#</strong> and <strong>Unreal Engine Blueprints</strong>. His <strong>MSc in Game Studies and Engineering</strong> pulled him toward research on player experience. His <strong>thesis and a journal article</strong> on punishment and difficulty are both published. When he designs a system, he usually prototypes and implements it himself. He also holds the <strong>Google UX Design certificate</strong>.",
+
+      "During his degree he worked as a <strong>Tutor</strong> in the Game Studies and Engineering programme at the University of Klagenfurt. He ran game-analysis sessions with the <strong>Klagenfurt Critical Game Lab</strong> and has helped organise the <strong>Klagenfurt Game Jam</strong> five times."
     ]
   },
   characterSkills: {
     title: "Character Skills",
     categories: [
       {
-        name: "Design Skills",
-        items: ["Game Design", "Gamification", "UI/UX Design", "Technical Design", "Level Design", "Design Documentation"]
+        name: "Game & Technical Design",
+        items: ["System Design", "Progression Design", "AI Design", "Level Design", "Game Design Documentation", "Playtesting", "Player-Centred Design"]
       },
       {
-        name: "Developer Skills",
-        items: ["C++, C#, Unreal Blueprints", "Unreal Engine", "Unity Engine", "Java", "JavaScript, TypeScript, HTML, CSS", "Lua, Python"]
+        name: "UX & Research",
+        items: ["UX Design", "User Research", "Usability Testing", "Analytics"]
       },
       {
-        name: "Software Skills",
-        items: ["Visual Studio, CLion, Visual Code", "WebStorm, Sublime, IntelliJIdea", "Blender", "Adobe XD, Figma", "Adobe Photoshop, Gimp", "Microsoft Office, Google Docs, Microsoft 365", "Perforce, SVN, Git", "Jira, Confluence, Trello", "Slack, Discord"]
+        name: "Programming",
+        items: ["C++", "C#", "Unreal Engine Blueprint", "Lua", "Python"]
+      },
+      {
+        name: "Engines & Tools",
+        items: ["Unreal Engine 4/5", "Unity", "Blender", "Figma", "Adobe Photoshop", "Git", "SVN", "Perforce", "Jira", "Confluence"]
       },
       {
         name: "Language Skills",
-        items: ["Native Turkish speaker", "Professional-level English speaker", "Beginner-level German speaker"]
+        items: ["Native Turkish speaker", "C1 English speaker", "A2 German speaker"]
       }
     ]
   },
@@ -570,7 +577,6 @@ function renderBackground() {
   
   const data = backgroundData;
   
-  // Split skills into left (Design, Developer) and right (Software, Language) columns
   const leftSkills = data.characterSkills.categories.slice(0, 2);
   const rightSkills = data.characterSkills.categories.slice(2, 4);
   
