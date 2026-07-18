@@ -203,6 +203,10 @@ const backgroundData = {
         items: ["UX Design", "User Research", "Usability Testing", "Analytics"]
       },
       {
+        name: "Language Skills",
+        items: ["Native Turkish speaker", "C1 English speaker", "A2 German speaker"]
+      },
+      {
         name: "Programming",
         items: ["C++", "C#", "Unreal Engine Blueprint", "Lua", "Python"]
       },
@@ -210,10 +214,7 @@ const backgroundData = {
         name: "Engines & Tools",
         items: ["Unreal Engine 4/5", "Unity", "Blender", "Figma", "Adobe Photoshop", "Git", "SVN", "Perforce", "Jira", "Confluence"]
       },
-      {
-        name: "Language Skills",
-        items: ["Native Turkish speaker", "C1 English speaker", "A2 German speaker"]
-      }
+
     ]
   },
   background: {
@@ -577,8 +578,8 @@ function renderBackground() {
   
   const data = backgroundData;
   
-  const leftSkills = data.characterSkills.categories.slice(0, 2);
-  const rightSkills = data.characterSkills.categories.slice(2, 4);
+  const leftSkills = data.characterSkills.categories.slice(0, 3);
+  const rightSkills = data.characterSkills.categories.slice(3, 5);
   
   container.innerHTML = `
     <!-- Player Character -->
